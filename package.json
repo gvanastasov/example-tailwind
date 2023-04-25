@@ -1,0 +1,23 @@
+{
+  "name": "example-tailwind",
+  "version": "1.0.0",
+  "description": "A simple demo of tailwindcss capabilities.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gvanastasov/example-tailwind.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gvanastasov/example-tailwind/issues"
+  },
+  "homepage": "https://github.com/gvanastasov/example-tailwind#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
