@@ -4,7 +4,8 @@
   "description": "A simple demo of tailwindcss capabilities.",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "styles:watch": "npx tailwindcss -i ./src/styles/index.css -o ./public/index.css --watch"
   },
   "repository": {
     "type": "git",
