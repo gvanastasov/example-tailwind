@@ -36,6 +36,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+    Base Styles
+
+    This keeps your base styling decisions in your markup alongside all 
+    of your other styles, instead of hiding them in a separate file.
+    Read more here:
+
+    https://tailwindcss.com/docs/adding-custom-styles#adding-base-styles
+*/
 @layer base {
     h1 {
         @apply text-6xl;
