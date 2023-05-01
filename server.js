@@ -12,8 +12,11 @@ if (process.env.NODE_ENV === 'development') {
     console.log('Setting up live reload server...')
 
     const liveReloadServer = livereload.createServer();
-    liveReloadServer.watch(path.join(__dirname, 'index.html'));
-    liveReloadServer.watch(path.join(__dirname, 'public/index.css'));
+    liveReloadServer.watch([
+        path.join(__dirname, 'src/index.ejs'), 
+        path.join(__dirname, 'src/sections'),
+        path.join(__dirname, 'public/index.css')
+    ]);
     liveReloadServer.server.once("connection", () => {
         setTimeout(() => {
         liveReloadServer.refresh("/");
@@ -32,20 +35,5 @@ server.use(publicLocation);
 server.listen(port, () => {
     console.log('Service started successfully...')
     const url = `http://${hostname}:${port}`
-  
-    try {
-      openBrowser(url)
-      console.log(`Browser session started at ${url}`)
-    } catch {
-      console.log(`Open browser session at ${url}`)
-    }
+    console.log(`Browser session started at ${url}`)
 });
-
-function openBrowser(url) {
-    const start = (process.platform === 'darwin'
-        ? 'open'
-        : process.platform === 'win32'
-            ? 'start'
-            : 'xdg-open')
-    require('child_process').exec(start + ' ' + url)
-}
