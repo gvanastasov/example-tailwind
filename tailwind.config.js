@@ -23,7 +23,11 @@ module.exports = {
    * https://tailwindcss.com/docs/theme
    */
   theme: {
-    extend: {},
+    extend: {
+      aspectRatio: {
+        'custom': '0.5 / 1'
+      }
+    },
   },
 
   /**
