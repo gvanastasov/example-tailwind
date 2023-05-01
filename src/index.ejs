@@ -19,11 +19,7 @@
         <br/>
         In short, Tailwind CSS is an incredibly powerful and flexible CSS framework that simplifies the process of building modern web interfaces while also providing developers with a high degree of customization and control.</p>
     </section>
-  
-      <% [
-          'aspect-ratio',
-          'container'
-      ].forEach((x, index) => { %>
+      <% sections.forEach((x, index) => { %>
       <section>
           <%- include(`./sections/${x}.ejs`) -%>
       </section>

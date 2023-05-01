@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
 
@@ -7,6 +8,34 @@ const server = express();
 const hostname = 'localhost'
 const port = process.env.PORT || 8080;
 const publicLocation = express.static(path.join(__dirname,'./public'));
+const entryTemplate = path.join(__dirname, './src/index.ejs');
+
+let sectionTemplates = []
+
+const getSectionTemplates = () => {
+    const result = [];
+    const sectionTemplatesPath = path.join(__dirname, './src/sections');
+    console.log('Scanning for sections: ', sectionTemplatesPath);
+    
+    fs.readdir(sectionTemplatesPath, function(err, files) {
+        if (err) {
+            return console.log('Unable to scan section templates: ' + err);
+        }
+
+        files.forEach(x => {
+            const [name, ext] = x.split(/\.([^.]+)$/);
+
+            if (ext === 'ejs') {
+                result.push(name);
+                console.log(`Section '${x}' added.`);
+            }
+        })
+    });
+
+    sectionTemplates = result;
+}
+
+getSectionTemplates();
 
 if (process.env.NODE_ENV === 'development') {
     console.log('Setting up live reload server...')
@@ -18,8 +47,9 @@ if (process.env.NODE_ENV === 'development') {
         path.join(__dirname, 'public/index.css')
     ]);
     liveReloadServer.server.once("connection", () => {
+        getSectionTemplates();
         setTimeout(() => {
-        liveReloadServer.refresh("/");
+            liveReloadServer.refresh("/");
         }, 100);
     });
 
@@ -27,7 +57,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 server.get('/', function(_req, res) {
-    res.render(path.join(__dirname, './src/index.ejs'));
+    res.render(entryTemplate, { sections: sectionTemplates });
 });
 
 server.use(publicLocation);
