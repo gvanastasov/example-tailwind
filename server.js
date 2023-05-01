@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 server.get('/', function(_req, res) {
-    res.sendFile(path.join(__dirname, './index.html'));
+    res.render(path.join(__dirname, './src/index.ejs'));
 });
 
 server.use(publicLocation);

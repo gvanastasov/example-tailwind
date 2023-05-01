@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/index.css" rel="stylesheet">
+</head>
+<body>
+  <h1 class="text-3xl font-bold underline">
+    Example Tailwindcss
+  </h1>
+  <section>
+    <p>Tailwind CSS is a popular utility-first CSS framework that provides developers with a comprehensive set of pre-designed CSS classes that can be easily applied to any HTML element. This powerful framework offers an extensive library of responsive and customizable styles, allowing developers to rapidly prototype and build modern web interfaces without writing a single line of custom CSS.
+      <br/>
+      With Tailwind CSS, you can easily create complex layouts, responsive designs, and beautiful user interfaces with minimal effort. For example, you can quickly create a responsive grid layout using Tailwind's built-in grid system by applying classes such as "grid", "grid-cols-2", and "gap-4". Or, you can add stylish buttons and forms to your application by applying classes like "bg-blue-500", "text-white", "rounded-md", and "hover:bg-blue-600".
+      <br/>
+      Tailwind CSS also offers a number of customization options, allowing developers to easily modify the default design system to fit their specific needs. This includes the ability to customize the color palette, typography, spacing, and more.
+      <br/>
+      In short, Tailwind CSS is an incredibly powerful and flexible CSS framework that simplifies the process of building modern web interfaces while also providing developers with a high degree of customization and control.</p>
+  </section>
+
+    <% [
+        'aspect-ratio'
+    ].forEach((x, index) => { %>
+    <section>
+        <%- include(`./sections/${x}.ejs`) -%>
+    </section>
+    <% }); %>
+</body>
+</html>
