@@ -28,6 +28,19 @@ module.exports = {
         'custom': '0.5 / 1'
       }
     },
+
+    container: {
+      center: true,
+      padding: '2rem'
+    },
+
+    colors: {
+      'placeholder': '#808080',
+    },
+
+    backgroundColor: {
+      'placeholder': '#ccc',
+    },
   },
 
   /**
