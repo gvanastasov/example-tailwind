@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "concurrently --names \"SERVER,STYLES\" -c \"bgGreen.bold,bgMagenta.bold\" \"npm run serve\" \"npm run styles:watch\"",
     "serve": "cross-env NODE_ENV=development nodemon server.js --ignore index.html",
-    "styles:build": "npx tailwindcss -o ./public/index.css --minify",
-    "styles:watch": "npx tailwindcss -i ./src/styles/index.css -o ./public/index.css --watch"
+    "styles:build": "npx tailwindcss -o ./public/index.css --minify --postcss",
+    "styles:watch": "npx tailwindcss -i ./src/styles/index.css -o ./public/index.css --watch --postcss"
   },
   "repository": {
     "type": "git",
