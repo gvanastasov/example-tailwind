@@ -7,7 +7,7 @@
 
     There are multiple ways of organizing the imports, but using @layer is
     the best one, to use the stripping of unused styles. Read more here:
-    
+
     https://tailwindcss.com/docs/using-with-preprocessors#build-time-imports
 */
 @import "./components/index.css";
@@ -35,3 +35,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-6xl;
+    }
+
+    h2 {
+        @apply text-4xl;
+    }
+}
