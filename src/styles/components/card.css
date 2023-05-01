@@ -1,7 +1,9 @@
-.card {
-    padding: theme('spacing.4');
-
-    &-body {
-        
+@layer components {
+    .card {
+        padding: theme('spacing.4');
+    
+        &-body {
+            
+        }
     }
 }

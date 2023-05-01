@@ -1,6 +1,37 @@
-@import "tailwindcss/base";
+/* 
+    Build-time imports
 
-@import "tailwindcss/components";
+    One of the most useful features preprocessors offer is the ability to 
+    organize your CSS into multiple files and combine them at build time 
+    by processing @import statements in advance, instead of in the browser.
+
+    There are multiple ways of organizing the imports, but using @layer is
+    the best one, to use the stripping of unused styles. Read more here:
+    
+    https://tailwindcss.com/docs/using-with-preprocessors#build-time-imports
+*/
 @import "./components/index.css";
 
-@import "tailwindcss/utilities";
+/* 
+    Preflight
+
+    Built on top of modern-normalize, Preflight is a set of base styles 
+    for Tailwind projects that are designed to smooth over cross-browser 
+    inconsistencies and make it easier for you to work within the 
+    constraints of your design system.
+
+    - Default margins are removed
+    - Headings are unstyled
+    - Lists are unstyled
+    - Accessibility considerations
+    - Images are block-level
+    - Images are constrained to the parent width
+    - Border styles are reset globally
+
+    Can be disabled via tailwind.config.js. Read more here:
+    
+    https://tailwindcss.com/docs/preflight
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
