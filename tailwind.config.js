@@ -26,20 +26,18 @@ module.exports = {
     extend: {
       aspectRatio: {
         'custom': '0.5 / 1'
-      }
+      },
+      colors: {
+        'placeholder': '#808080',
+      },
+      backgroundColor: {
+        'placeholder': '#ccc',
+      },
     },
 
     container: {
       center: true,
       padding: '2rem'
-    },
-
-    colors: {
-      'placeholder': '#808080',
-    },
-
-    backgroundColor: {
-      'placeholder': '#ccc',
     },
   },
 
