@@ -1,0 +1,40 @@
+<h2>Overflow</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+    <div class="bg-placeholder p-8">
+        <div class="overflow-visible relative h-24 flex items-center bg-white">
+            <img src="images/radial.png" class="absolute -left-6 h-32"/>
+        </div>
+        <div class="text-center mt-4">Visible</div>
+    </div>
+
+    <div class="bg-placeholder p-8">
+        <div class="overflow-hidden relative h-24 flex items-center bg-white">
+            <img src="images/radial.png" class="absolute -left-6 h-32"/>
+        </div>
+        <div class="text-center mt-4">Hidden</div>
+    </div>
+</div>
+
+<div class="bg-placeholder p-8 mt-8">
+    <div class="overflow-auto h-72">
+        <div class="flex items-center gap-4 p-4 h-24 bg-white">One</div>
+        <div class="flex items-center gap-4 p-4 h-24 bg-white">Two</div>
+        <div class="flex items-center gap-4 p-4 h-24 bg-white">Three</div>
+        <div class="flex items-center gap-4 p-4 h-24 bg-white">Four</div>
+        <div class="flex items-center gap-4 p-4 h-24 bg-white">Five</div>
+    </div>
+    <div class="text-center mt-4">Auto/Scroll</div>
+</div>
+
+<div class="bg-placeholder p-8 mt-8">
+    <div class="overflow-x-auto">
+        <div class="flex">
+            <div class="flex-none flex items-center justify-center w-2/5 h-24 bg-white">One</div>
+            <div class="flex-none flex items-center justify-center w-2/5 h-24 bg-white">Two</div>
+            <div class="flex-none flex items-center justify-center w-2/5 h-24 bg-white">Three</div>
+            <div class="flex-none flex items-center justify-center w-2/5 h-24 bg-white">Four</div>
+            <div class="flex-none flex items-center justify-center w-2/5 h-24 bg-white">Five</div>
+        </div>
+    </div>
+    <div class="text-center mt-4">Horizontal scroll</div>
+</div>
