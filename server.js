@@ -27,9 +27,10 @@ const getSectionTemplates = () => {
 
             if (ext === 'ejs') {
                 result.push(name);
-                console.log(`Section '${x}' added.`);
             }
         })
+
+        console.log(`${result.length} sections added.`);
     });
 
     sectionTemplates = result;
