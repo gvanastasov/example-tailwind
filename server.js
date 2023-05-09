@@ -17,8 +17,8 @@ let sectionTemplates = [
     sections: [],
   },
   {
-    name: "Flex",
-    path: "/flex",
+    name: "Flexbox",
+    path: "/flexbox",
     sections: []
   },
 ];
