@@ -29,12 +29,14 @@
       </div>
       <main class="basis-3/4">
         <% sections.forEach((x, index) => { %>
-          <h2 class="text-base bg-black text-white pl-4 block mb-4 leading-[3rem]"><%= x.name %></h2>
-          <% x.sections.forEach((y) => { %>
-            <section class="mb-8">
-            <%- include(`./sections/${x.path}/${y}.ejs`, { id: y }) -%>
-            </section>
-          <% }); %>
+          <div class="mb-24">
+            <h2 class="text-base bg-black text-white pl-4 block mb-4 leading-[3rem]"><%= x.name %></h2>
+            <% x.sections.forEach((y) => { %>
+              <section class="mb-8">
+              <%- include(`./sections/${x.path}/${y}.ejs`, { id: y }) -%>
+              </section>
+            <% }); %>
+          </div>
         <% }); %>
       </main>
     </div>
