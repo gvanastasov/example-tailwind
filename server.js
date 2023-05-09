@@ -21,6 +21,11 @@ let sectionTemplates = [
     path: "/flexbox",
     sections: []
   },
+  {
+    name: "Grid",
+    path: "/grid",
+    sections: []
+  }
 ];
 
 const scan = (location) => {
