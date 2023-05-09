@@ -14,19 +14,20 @@ let sectionTemplates = [
   {
     name: "Layout",
     path: "/layout",
-    sections: [],
   },
   {
     name: "Flexbox",
     path: "/flexbox",
-    sections: []
   },
   {
     name: "Grid",
     path: "/grid",
-    sections: []
+  },
+  {
+    name: "Spacing",
+    path: "/spacing",
   }
-];
+].map(x => ({...x, sections: []}));
 
 const scan = (location) => {
   const result = [];
