@@ -1,6 +1,6 @@
 # Example-Tailwind
 
-This repository is a demo of the capabilities of Tailwind CSS, a popular utility-first CSS framework. It includes an Express.js server that serves a dummy page and configuration files for Tailwind CSS and PostCSS. Remark, no JS is used, therefore the demo site works with limited functionality.
+This repository is a demo of the capabilities of Tailwind CSS, a popular utility-first CSS framework. It includes an Express.js server that serves a dummy page and configuration files for Tailwind CSS and PostCSS. Remark, no JS is used, therefore the demo site works with limited functionality. Remark, this is not suppose to have a finished look, but rather a simple showcase. Mobile devices are not taken into considiration, since this is far from any production grade and merely an example to run and play around with. 
 
 ## Features
 
