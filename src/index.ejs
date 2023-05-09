@@ -19,16 +19,21 @@
         <nav class="sticky top-10">
           <ul>
             <% sections.forEach((x, index) => { %>
-              <li><a rel="noopener" href="#<%= x %>" class="bg-placeholder pl-4 block mb-4 leading-[3rem]"><%- x -%></a></li>
+              <li class="bg-black text-white pl-4 block mb-4 leading-[3rem]"><%= x.name %></li>
+              <% x.sections.forEach((y) => { %>
+              <li><a rel="noopener" href="#<%= y %>" class="bg-placeholder pl-4 block mb-4 leading-[3rem]"><%- y -%></a></li>
+              <% }); %>                
             <% }); %>
           </ul>
         </nav>
       </div>
       <main class="basis-3/4">
         <% sections.forEach((x, index) => { %>
-        <section class="mb-8">
-            <%- include(`./sections/${x}.ejs`, { id: x }) -%>
+          <% x.sections.forEach((y) => { %>
+            <section class="mb-8">
+            <%- include(`./sections/${x.path}/${y}.ejs`, { id: y }) -%>
         </section>
+          <% }); %>
         <% }); %>
       </main>
     </div>

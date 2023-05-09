@@ -10,11 +10,15 @@ const port = process.env.PORT || 8080;
 const publicLocation = express.static(path.join(__dirname,'./public'));
 const entryTemplate = path.join(__dirname, './src/index.ejs');
 
-let sectionTemplates = []
+let sectionTemplates = [{
+    name: 'Layout',
+    path: '',
+    sections: []
+}]
 
-const getSectionTemplates = () => {
+const scan = (location) => {
     const result = [];
-    const sectionTemplatesPath = path.join(__dirname, './src/sections');
+    const sectionTemplatesPath = path.join(__dirname, './src/sections', location.path);
     console.log('Scanning for sections: ', sectionTemplatesPath);
     
     fs.readdir(sectionTemplatesPath, function(err, files) {
@@ -31,9 +35,12 @@ const getSectionTemplates = () => {
         })
 
         console.log(`${result.length} sections added.`);
+        location.sections = [...result];
     });
+}
 
-    sectionTemplates = result;
+const getSectionTemplates = () => {
+    sectionTemplates.forEach(x => scan(x));
 }
 
 getSectionTemplates();
