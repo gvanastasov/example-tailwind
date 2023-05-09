@@ -14,7 +14,7 @@ module.exports = {
    * files that contain Tailwind class names.
    * https://tailwindcss.com/docs/content-configuration
    */
-  content: ["./src/index.ejs", "./src/sections/*.ejs"],
+  content: ["./src/index.ejs", "./src/sections/**/*.ejs"],
 
   /**
    * The theme section is where you define your color palette, 
