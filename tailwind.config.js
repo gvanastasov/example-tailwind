@@ -28,9 +28,6 @@ module.exports = {
         'custom': '0.5 / 1'
       },
       colors: {
-        'placeholder': '#808080',
-      },
-      backgroundColor: {
         'placeholder': '#ccc',
       },
       listStyleImage: {
@@ -51,7 +48,7 @@ module.exports = {
    * he plugins section allows you to register plugins with Tailwind that can be 
    * used to generate extra utilities, components, base styles, or custom variants.
    */
-  plugins: [],
+  // plugins: [],
 
   /**
    * The presets section allows you to specify your own custom base configuration 
