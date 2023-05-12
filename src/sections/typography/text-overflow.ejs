@@ -1,0 +1,31 @@
+<h3 class="mb-8 p-4 border-b-2 border-placeholder"><a id="<%= id %>" class="mr-4">#</a>Text Overflow</h3>
+
+<div class="bg-placeholder p-8 mb-8">
+
+    <div class="grid grid-cols-3 gap-8">
+        <div>
+            <legend>truncate</legend>
+            <div class="p-8 bg-white">
+                <p class="truncate before:content-lorem"></p>
+            </div>
+        </div>
+        
+        <div>
+            <legend>text-ellipsis</legend>
+            <div class="p-8 bg-white">
+                <p class="text-ellipsis overflow-hidden">
+                    pneumonoultramicroscopicsilicovolcanoconiosis
+                </p>
+            </div>
+        </div>
+        
+        <div>
+            <legend>text-clip</legend>
+            <div class="p-8 bg-white">
+                <p class="text-clip overflow-hidden">
+                    pneumonoultramicroscopicsilicovolcanoconiosis
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
