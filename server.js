@@ -35,6 +35,10 @@ let sectionTemplates = [
     name: "Typography",
     path: "/typography",
   },
+  {
+    name: "Background",
+    path: "/background",
+  }
 ].map(x => ({...x, sections: []}));
 
 const scan = (location) => {

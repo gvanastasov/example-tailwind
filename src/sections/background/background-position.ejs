@@ -1,0 +1,23 @@
+<h3 class="mb-8 p-4 border-b-2 border-placeholder"><a id="<%= id %>" class="mr-4">#</a>Position</h3>
+
+<div class="bg-placeholder p-8 mb-8">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <% [
+            'bg-left-top', 
+            'bg-top', 
+            'bg-right-top',
+            'bg-left',
+            'bg-center',
+            'bg-right',
+            'bg-left-bottom',
+            'bg-bottom',
+            'bg-right-bottom',
+        ].forEach(pos => { %>
+        <div>
+            <div class="<%= pos %> bg-no-repeat mx-auto w-48 h-48 p-8" style="background-image: url('./images/radial.png')">
+            </div>
+            <div class="text-center mt-4"><%= pos %></div>
+        </div>
+        <% }); %>
+    </div>
+</div>
