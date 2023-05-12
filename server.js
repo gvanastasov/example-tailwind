@@ -30,7 +30,11 @@ let sectionTemplates = [
   {
     name: "Sizing",
     path: "/sizing",
-  }
+  },
+  {
+    name: "Typography",
+    path: "/typography",
+  },
 ].map(x => ({...x, sections: []}));
 
 const scan = (location) => {
