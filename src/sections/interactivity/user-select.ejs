@@ -1,0 +1,13 @@
+<h3 class="mb-8 p-4 border-b-2 border-placeholder"><a id="<%= id %>" class="mr-4">#</a>User Select</h3>
+
+<div class="bg-placeholder p-8 mb-8">
+    <% [
+        'select-none', 
+        'select-text', 
+        'select-all', 
+        'select-auto', 
+    ].forEach(x => { %>
+        <legend><%= x %></legend>
+        <p class="<%= x %> p-4 mb-4 bg-white">The quick brown fox jumps over the lazy dog.</p>
+    <% }); %>
+</div>

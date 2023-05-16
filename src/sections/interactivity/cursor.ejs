@@ -1,0 +1,49 @@
+<h3 class="mb-8 p-4 border-b-2 border-placeholder"><a id="<%= id %>" class="mr-4">#</a>Cursor</h3>
+
+<div class="bg-placeholder p-8 mb-8">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <% [
+            'cursor-auto',
+            'cursor-default',
+            'cursor-pointer',
+            'cursor-wait',
+            'cursor-text',
+            'cursor-move',
+            'cursor-help',
+            'cursor-not-allowed',
+            'cursor-none',
+            'cursor-context-menu',
+            'cursor-progress',
+            'cursor-cell',
+            'cursor-crosshair',
+            'cursor-vertical-text',
+            'cursor-alias',
+            'cursor-copy',
+            'cursor-no-drop',
+            'cursor-grab',
+            'cursor-grabbing',
+            'cursor-all-scroll',
+            'cursor-col-resize',
+            'cursor-row-resize',
+            'cursor-n-resize',
+            'cursor-e-resize',
+            'cursor-s-resize',
+            'cursor-w-resize',
+            'cursor-ne-resize',
+            'cursor-nw-resize',
+            'cursor-se-resize',
+            'cursor-sw-resize',
+            'cursor-ew-resize',
+            'cursor-ns-resize',
+            'cursor-nesw-resize',
+            'cursor-nwse-resize',
+            'cursor-zoom-in',
+            'cursor-zoom-out',
+        ].forEach(x => { %>
+        <div>
+            <button class="<%= x %> rounded-full border border-rose-700 px-8 py-2 mx-auto block bg-rose-500 text-white">Button</button>
+            <div class="text-center mt-4"><%= x %></div>
+        </div>
+        <% }); %>
+    </div>
+</div>
