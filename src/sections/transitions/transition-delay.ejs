@@ -1,0 +1,17 @@
+<h3 class="mb-8 p-4 border-b-2 border-placeholder"><a id="<%= id %>" class="mr-4">#</a>Transition Delay</h3>
+
+<div class="bg-placeholder p-8 mb-8">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <% [
+            'delay-0', 
+            'delay-100', 
+            'delay-500', 
+            'delay-1000', 
+        ].forEach(x => { %>
+        <div>
+            <button class="<%= x %> rounded-full border border-rose-700 px-8 py-2 mx-auto block bg-rose-500 text-white transition ease-in-out hover:scale-125">Button</button>
+            <div class="text-center mt-4"><%= x %></div>
+        </div>
+        <% }); %>
+    </div>
+</div>
