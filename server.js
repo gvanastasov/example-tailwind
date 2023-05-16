@@ -50,6 +50,10 @@ let sectionTemplates = [
   {
     name: "Filters",
     path: "/filters"
+  },
+  {
+    name: 'Tables',
+    path: "/tables"
   }
 ].map(x => ({...x, sections: []}));
 
