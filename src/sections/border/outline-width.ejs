@@ -1,0 +1,18 @@
+<h3 class="mb-8 p-4 border-b-2 border-placeholder"><a id="<%= id %>" class="mr-4">#</a>Outline Width</h3>
+
+<div class="bg-placeholder p-8 mb-8">
+    <div class="grid grid-cols-4 gap-8">
+        <% [
+            'outline-0', 
+            'outline-1', 
+            'outline-2', 
+            'outline-4', 
+            'outline-8', 
+        ].forEach(x => { %>
+        <div>
+            <div class="<%= x %> outline outline-offset-2 mx-auto w-16 h-16 p-8 bg-white"></div>
+            <div class="text-center mt-4"><%= x %></div>
+        </div>
+        <% }); %>
+    </div>
+</div>

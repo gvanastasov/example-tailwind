@@ -1,0 +1,19 @@
+<h3 class="mb-8 p-4 border-b-2 border-placeholder"><a id="<%= id %>" class="mr-4">#</a>Ring Width</h3>
+
+<div class="bg-placeholder p-8 mb-8">
+    <div class="grid grid-cols-4 gap-8">
+        <% [
+            'ring', 
+            'ring-0', 
+            'ring-1', 
+            'ring-2', 
+            'ring-4', 
+            'ring-8',
+            'ring-inset'
+        ].forEach(x => { %>
+        <div>
+            <button class="<%= x %> ring-offset-2 rounded-full mx-auto px-8 py-2 bg-white w-full block"><%= x %></button>
+        </div>
+        <% }); %>
+    </div>
+</div>
