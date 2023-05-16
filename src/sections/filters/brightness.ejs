@@ -1,0 +1,24 @@
+<h3 class="mb-8 p-4 border-b-2 border-placeholder"><a id="<%= id %>" class="mr-4">#</a>Brightness</h3>
+
+<div class="bg-placeholder p-8 mb-8">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <% [
+            'brightness-0', 
+            'brightness-50', 
+            'brightness-75', 
+            'brightness-90', 
+            'brightness-95', 
+            'brightness-100', 
+            'brightness-105', 
+            'brightness-110', 
+            'brightness-125', 
+            'brightness-150', 
+            'brightness-200', 
+        ].forEach(x => { %>
+        <div>
+            <div class="<%= x %> rounded mx-auto w-16 h-16 bg-center bg-cover bg-no-repeat" style="background-image: url('./images/radial.png')"></div>
+            <div class="text-center mt-4"><%= x %></div>
+        </div>
+        <% }); %>
+    </div>
+</div>
