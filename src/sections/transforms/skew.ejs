@@ -1,0 +1,37 @@
+<h3 class="mb-8 p-4 border-b-2 border-placeholder"><a id="<%= id %>" class="mr-4">#</a>Skew</h3>
+
+<div class="bg-placeholder p-8 mb-8">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <% [
+            'skew-x-0', 
+            'skew-x-2', 
+            'skew-x-6', 
+            'skew-x-12', 
+        ].forEach(x => { %>
+        <div class="relative">
+            <div class="<%= x %> border-black border-2 mx-auto w-16 h-16 p-8 bg-gradient-to-b from-blue-500"></div>
+            <div class="absolute top-0 left-[calc(50%-32px)] w-16 h-16 p-8 bg-rose-500 opacity-25"></div>
+            <div class="text-center mt-4"><%= x %></div>
+        </div>
+        <% }); %>
+    </div>
+    <div class="text-center mt-4">Horizontal</div>
+</div>
+
+<div class="bg-placeholder p-8 mb-8">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <% [
+            'skew-y-0', 
+            'skew-y-2', 
+            'skew-y-6', 
+            'skew-y-12', 
+        ].forEach(x => { %>
+        <div class="relative">
+            <div class="<%= x %> border-black border-2 mx-auto w-16 h-16 p-8 bg-gradient-to-b from-blue-500"></div>
+            <div class="absolute top-0 left-[calc(50%-32px)] w-16 h-16 p-8 bg-rose-500 opacity-25"></div>
+            <div class="text-center mt-4"><%= x %></div>
+        </div>
+        <% }); %>
+    </div>
+    <div class="text-center mt-4">Vertical</div>
+</div>
