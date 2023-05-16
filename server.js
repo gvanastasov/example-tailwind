@@ -42,6 +42,10 @@ let sectionTemplates = [
   {
     name: "Border",
     path: "/border",
+  },
+  {
+    name: "Effects",
+    path: "/effects"
   }
 ].map(x => ({...x, sections: []}));
 

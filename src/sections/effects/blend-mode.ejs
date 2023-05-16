@@ -1,0 +1,32 @@
+<h3 class="mb-8 p-4 border-b-2 border-placeholder"><a id="<%= id %>" class="mr-4">#</a>Blend Mode</h3>
+
+<div class="bg-placeholder p-8 mb-8">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <% [
+            'mix-blend-normal', 
+            'mix-blend-multiply', 
+            'mix-blend-screen', 
+            'mix-blend-overlay', 
+            'mix-blend-darken', 
+            'mix-blend-lighten', 
+            'mix-blend-color-dodge', 
+            'mix-blend-color-burn', 
+            'mix-blend-hard-light', 
+            'mix-blend-soft-light', 
+            'mix-blend-difference', 
+            'mix-blend-exclusion', 
+            'mix-blend-saturation', 
+            'mix-blend-color', 
+            'mix-blend-luminosity', 
+            'mix-blend-plus-lighter', 
+        ].forEach(x => { %>
+        <div>
+            <div class="flex justify-center -space-x-8">
+                <div class="<%= x %> bg-blue-400 rounded-full w-16 h-16"></div>
+                <div class="<%= x %> bg-pink-400 rounded-full w-16 h-16"></div>
+            </div>
+            <div class="text-center mt-4"><%= x %></div>
+        </div>
+        <% }); %>
+    </div>
+</div>

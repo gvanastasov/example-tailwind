@@ -1,0 +1,24 @@
+<h3 class="mb-8 p-4 border-b-2 border-placeholder"><a id="<%= id %>" class="mr-4">#</a>Opacity</h3>
+
+<div class="bg-placeholder p-8 mb-8">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <% [
+            'opacity-0', 
+            'opacity-10', 
+            'opacity-20', 
+            'opacity-30', 
+            'opacity-40', 
+            'opacity-50', 
+            'opacity-60', 
+            'opacity-70', 
+            'opacity-80', 
+            'opacity-90', 
+            'opacity-100', 
+        ].forEach(x => { %>
+        <div>
+            <div class="<%= x %> rounded mx-auto w-16 h-16 p-8 bg-white"></div>
+            <div class="text-center mt-4"><%= x %></div>
+        </div>
+        <% }); %>
+    </div>
+</div>
